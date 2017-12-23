@@ -1,7 +1,5 @@
 CREATE SCHEMA `php_feira` ;
 
-
-
 CREATE TABLE `produtos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(255) NOT NULL,
@@ -12,7 +10,6 @@ CREATE TABLE `produtos` (
   `imagem` blob,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1
-
 
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -27,9 +24,15 @@ CREATE TABLE `categorias` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 
-
 INSERT INTO `php_feira`.`usuarios` (`email`, `senha`)
-VALUES ('admin@admin.com', 'senhaAdmin');
+VALUES ('seuEmail@admin.com', 'senhaAdmin');
 
-
-
+INSERT INTO `php_feira`.`categorias`
+(`nome`)
+VALUES
+("Verduras"),
+("Legumes"),
+("Organicos"),
+("Laticínios"),
+("Temperos"),
+("Guloseimas");

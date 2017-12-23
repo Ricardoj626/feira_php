@@ -1,14 +1,14 @@
 # Gerenciamento de feira
 
-### Aplicaçao criada com PHP 7.1 e MySQL 5.7
+## Aplicaçao criada com PHP 7.1 e MySQL 5.7
 
 
-Criando o esquema:
+##Criando o esquema:
 ```
 CREATE SCHEMA `php_feira` ;
 ```
 
-Criando a tabela produtos:
+##Criando a tabela produtos:
 ```
 CREATE TABLE `produtos` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -22,7 +22,7 @@ CREATE TABLE `produtos` (
 ) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1
 ```
 
-Criando a tabela usuarios:
+##Criando a tabela usuarios:
 ```
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -32,7 +32,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 ```
 
-Criando a tabela categorias:
+#Criando a tabela categorias:
 ```
 CREATE TABLE `categorias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -41,12 +41,13 @@ CREATE TABLE `categorias` (
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 ```
 
-Inserindo um administrador:
+##Inserindo um administrador:
+O valor da senha é criptografado com MD5, para logar use: senhaAdmin
 ```
 INSERT INTO `php_feira`.`usuarios` (`email`, `senha`)
-VALUES ('seuEmail@admin.com', 'senhaAdmin');
+VALUES ('seuEmail@admin.com', '498cf5f03c3e04c795e2519229916143');
 ```
-
+Você pode criar sua própria senha com criptografia MD5 * [Aqui](http://md5encryption.com/)
 Inserindo algumas categorias:
 ```
 INSERT INTO `php_feira`.`categorias`

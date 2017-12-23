@@ -7,12 +7,12 @@ $nome = $_POST['nome'];
 $preco = $_POST['preco'];
 $descricao = $_POST['descricao'];
 $categoria_id = $_POST['categoria_id'];
-if(array_key_exists('usado', $_POST)) {
-    $usado = "true";
+if(array_key_exists('disponivel', $_POST)) {
+    $disponivel = "true";
 } else {
-    $usado = "false";
+    $disponivel = "false";
 }
-if(alteraProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $usado)) { ?>
+if(alteraProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $disponivel)) { ?>
     <p class="text-success">O produto <?= $nome ?>, <?= $preco ?> foi alterado.</p>
 <?php } else {
     $msg = mysqli_error($conexao);

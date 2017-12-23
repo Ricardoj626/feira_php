@@ -20,16 +20,16 @@ function buscaProduto($conexao, $id) {
 }
 
 
-function insereProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado, $mysqlImg) {
-    $query = "insert into produtos (nome, preco, descricao, categoria_id, usado, imagem) values ('{$nome}', {$preco}, '{$descricao}', $categoria_id, $usado, '{$mysqlImg}')";
+function insereProduto($conexao, $nome, $preco, $descricao, $categoria_id, $disponivel, $mysqlImg) {
+    $query = "insert into produtos (nome, preco, descricao, categoria_id, disponivel, imagem) values ('{$nome}', {$preco}, '{$descricao}', $categoria_id, $disponivel, '{$mysqlImg}')";
     $resultadoDaInsercao = mysqli_query($conexao, $query);
     return $resultadoDaInsercao;
 
 }
 
-function alteraProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $usado) {
+function alteraProduto($conexao, $id, $nome, $preco, $descricao, $categoria_id, $disponivel) {
     $query = "update produtos set nome = '{$nome}', preco = {$preco}, descricao = '{$descricao}', 
-        categoria_id= {$categoria_id}, usado = {$usado} where id = '{$id}'";
+        categoria_id= {$categoria_id}, disponivel = {$disponivel} where id = '{$id}'";
     return mysqli_query($conexao, $query);
 }
 

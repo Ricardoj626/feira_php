@@ -9,7 +9,7 @@ $nome = $_POST["nome"];
 $preco = $_POST["preco"];
 $descricao = $_POST['descricao'];
 $categoria_id = $_POST['categoria_id'];
-$usado = $_POST['usado'];
+$disponivel = $_POST['disponivel'];
 $cadastro = $_GET['cadastro'];
 
 
@@ -30,13 +30,13 @@ else {
 }
 
 
-if(array_key_exists('usado', $_POST)) {
-    $usado = "true";
+if(array_key_exists('disponivel', $_POST)) {
+    $disponivel = "true";
 } else {
-    $usado = "false";
+    $disponivel = "false";
 }
 
-if(insereProduto($conexao, $nome, $preco, $descricao, $categoria_id, $usado, $mysqlImg)) { ?>
+if(insereProduto($conexao, $nome, $preco, $descricao, $categoria_id, $disponivel, $mysqlImg)) { ?>
 
     <p class="text-success">Produto <?= $nome; ?>, <?= $preco; ?> adicionado com sucesso!</p>
     <?php
@@ -68,16 +68,16 @@ $produtos = listaProdutos($conexao);
 
                 </td>
                 <td><?= $produto['nome'] ?></td>
+		
 
                 <td><?= $produto['categoria_nome'] ?></td>
-
-                <td class="preco"><?= $produto['preco'] ?></td>
 
 
 
                 <td>
+
                     <form  action="comprar.php" method="post">
-                <td class="valor-rep"><input class="form-control" type="number" name="quantidade" /></td>
+                <td><input class="form-control" type="number" name="quantidade" /></td>
                 </form>
                 </td>
             </tr>
@@ -92,6 +92,11 @@ $produtos = listaProdutos($conexao);
 
 </div>
 </div>
+
+
+
+
+
 
 
 

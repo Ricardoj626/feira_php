@@ -15,10 +15,7 @@
                 <td>Descrição</td>
                 <td><textarea class="form-control" name="descricao"><?=$produto['descricao']?></textarea></td>
 </tr>
-<tr>
-    <td></td>
-    <td><input type="checkbox" name="usado" <?=$usado?> value="true"> Usado</td>
-</tr>
+
 <tr>
     <td>Categoria</td>
     <td>

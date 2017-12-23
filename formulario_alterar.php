@@ -5,7 +5,7 @@ require_once("banco_produto.php");
 $id = $_GET['id'];
 $produto = buscaProduto($conexao, $id);
 $categorias = listaCategorias($conexao);
-$usado = $produto['usado'] ? "checked='checked'" : "";
+$disponivel = $produto['disponivel'] ? "checked='checked'" : "";
 ?>
 <h1>Alterando produto</h1>
 <form action="altera_produto.php" method="post">

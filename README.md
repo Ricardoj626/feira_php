@@ -56,7 +56,7 @@ VALUES
 ("Verduras"),
 ("Legumes"),
 ("Organicos"),
-("Laticínios"),
+("Laticinios"),
 ("Temperos"),
 ("Guloseimas");
 ```

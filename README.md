@@ -1,8 +1,6 @@
 # Gerenciamento de feira
 
-### Criando o banco de dados
-
-What things you need to install the software and how to install them
+### Aplicaçao criada com PHP 7.1 e MySQL 5.7
 
 
 Criando o esquema:
@@ -24,7 +22,7 @@ CREATE TABLE `produtos` (
 ) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1
 ```
 
-Criando a tabela usuarios
+Criando a tabela usuarios:
 ```
 CREATE TABLE `usuarios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -34,7 +32,7 @@ CREATE TABLE `usuarios` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 ```
 
-Criando a tabela categorias
+Criando a tabela categorias:
 ```
 CREATE TABLE `categorias` (
   `id` int(11) NOT NULL AUTO_INCREMENT,

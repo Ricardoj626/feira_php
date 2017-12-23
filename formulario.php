@@ -4,7 +4,7 @@ require_once("logica_usuario.php");
 
 verificaUsuario();
 
-$produto = array("nome" => "", "descricao" => "", "preco" => "", "categoria_id" => "6");
+$produto = array("nome" => "", "descricao" => "", "preco" => "", "categoria_id" => "1");
 $usado = "";
 
 $categorias = listaCategorias($conexao); ?>

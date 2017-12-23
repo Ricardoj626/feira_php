@@ -16,7 +16,7 @@ CREATE TABLE `produtos` (
   `preco` decimal(10,2) NOT NULL,
   `descricao` varchar(45) DEFAULT 'Descricao do produto',
   `categoria_id` int(11) DEFAULT NULL,
-  `usado` tinyint(1) DEFAULT '0',
+  `disponivel` tinyint(1) DEFAULT '1',
   `imagem` blob,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1
@@ -47,8 +47,8 @@ O valor da senha é criptografado com MD5, para logar use: senhaAdmin
 INSERT INTO `php_feira`.`usuarios` (`email`, `senha`)
 VALUES ('seuEmail@admin.com', '498cf5f03c3e04c795e2519229916143');
 ```
-Você pode criar sua própria senha com criptografia MD5 * [Aqui](http://md5encryption.com/)
-Inserindo algumas categorias:
+Você pode criar sua própria senha com criptografia MD5 [Aqui](http://md5encryption.com/)
+### Inserindo algumas categorias:
 ```
 INSERT INTO `php_feira`.`categorias`
 (`nome`)
